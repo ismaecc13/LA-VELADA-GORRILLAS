@@ -135,6 +135,24 @@
       display: block;
     }
 
+    .soon-text {
+      display: none;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.5rem;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      z-index: 20;
+    }
+
+    body.fight-mode .soon-text {
+      display: block;
+    }
+
     @media (max-width: 768px) {
       .page-content {
         gap: 20px;
@@ -170,6 +188,10 @@
         width: 0.9em;
         height: 0.9em;
       }
+
+      .soon-text {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
@@ -189,6 +211,8 @@
       <span>LosGorrillas</span>
     </a>
   </footer>
+
+  <div class="soon-text">MUY PRONTO</div>
 
   <script>
     document.querySelector('.title').addEventListener('click', function() {
